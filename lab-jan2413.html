@@ -1,0 +1,100 @@
+<html>
+ 
+  <head>
+     <title>WebDev Assignment</title>
+ 
+ 
+     <script language="Javascript">
+        
+        function add()
+        {
+		
+		// alert("HERE");
+		
+		
+        var    chkbox1;    //Variable to hold value if 1st checkbox is selected
+        var    chkbox2;    
+        
+                
+		var    intchkbox1;   //Variable to hold integer value of checkbox
+        var    intchkbox2;   
+            
+  
+        if(document.form1.chkbox1.checked == true)
+               chkbox1 = document.form1.chkbox1.value;
+        else chkbox1 = "0"
+ 
+        if(document.form1.chkbox2.checked == true)
+               chkbox2 = document.form1.chkbox2.value;
+        else chkbox2 = "0"
+    
+        
+        
+        //convert string values to integers so they can be used in calculations
+        
+        intchkbox1 = parseInt(chkbox1);
+        intchkbox2 = parseInt(chkbox2);
+ 
+        subTotal = intchkbox1 + intchkbox2;
+		
+		document.form1.displaysubTotal.value=subTotal;
+ 
+		}//end of add()
+ 
+        
+ 
+     </script>
+ 
+</head>
+ 
+ 
+<body>
+ 
+   <br />
+   <br />
+   <br />
+ 
+   <form name="form1" >                  <!--Names form as "addfrom"-->
+        
+      <table align =" center" border =" 0" width = 80%>      <!--Creates table to hold buttons-->
+ 
+      <tr>
+         <td><strong>Description</strong></td>
+         <td><strong>Cost</strong></td>
+      </tr>
+   
+
+      <tr>
+         <td><input type = "checkbox" name = "chkbox1" value = "100"> abc </td>
+         <td>€100</td>
+      </tr> <!--Creates checkbox and assigns a value to it-->
+        
+      <tr>
+         <td><input type = "checkbox" name = "chkbox2" value = "200"> xyz </td>
+         <td>€200</td>
+      </tr>
+
+
+
+      <tr>
+         <td>Sub Total</td>
+         <td><input type = "text" name="displaysubTotal"></td>
+      </tr>
+
+      
+        
+      </table>
+ 
+      <br>
+        
+        <center>
+        <input type = "button" name = "Calculate" value ="Calculate cost" onclick ="add();">
+        </center>              
+        
+   </form>
+        
+</body>
+ 
+</html>
+ 
+
