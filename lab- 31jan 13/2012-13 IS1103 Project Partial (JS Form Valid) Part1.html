@@ -1,0 +1,77 @@
+<html>
+
+<head>
+   <title>JS Form Valid Part1</title>
+
+
+   <script type="text/javascript"> //JS Form Validation ==> STARTS HERE
+
+      function validate_form ( )
+      {
+         valid = true;
+
+         if ( document.form1.textbox1.value == "" )
+         {
+            window.alert( "Please insert a Numeric Entry in this testbox" );
+            valid = false;
+         }//end of textbox1 validation
+
+        if ( document.form1.textbox2.value == "" )
+        {
+            window.alert( "Please insert a Non-Numeric Entry in this testbox" );
+            valid = false;
+        }//end of textbox2 validation
+ 
+        return valid;
+
+     }//JS Form Validation Function ==> ENDS HERE
+
+   </script> 
+
+
+</head>
+
+<body>
+
+<div align= "center">
+
+<h2 align="center">JS Form Valid</h2>
+<br><br>
+
+
+<form name="form1" action="2012-13 IS1103 Project Partial (JS Form Valid) Part2.html" onsubmit="return validate_form();">
+
+<!--
+   The form element includes an onsubmit attribute to call our 
+   JavaScript validation function, validate_form(), when 
+   the "Process" command button is clicked. 
+
+   The return allows us to return the value true or 
+   false from our function to the browser, where 
+   true means "carry on and send the form to the 
+   server", and false means "don't send the form". 
+   This means that we can prevent the form from being
+   sent if the user hasn't filled it in properly.
+
+//-->
+
+  <div> 
+  Numeric Entry HERE   >> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="textbox1" align="left"><br>
+  </div>
+
+  <div> 
+  Non Numeric Entry HERE   >> &nbsp;&nbsp;&nbsp;<input type="text" name="textbox2" align="left"><br>
+  </div>
+
+  
+  
+  <br><br>  <br><br>
+
+  <input type="submit" value="Process">
+  
+</form>
+
+</div>
+
+</body>
+</html>
